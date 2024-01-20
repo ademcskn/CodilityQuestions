@@ -25,8 +25,13 @@ namespace CodilityQuestions
             #endregion
 
             #region FrogJmp
-            FrogJmp frogJmp = new FrogJmp();
-            Console.WriteLine(frogJmp.Run(5, 25, 10));
+            //FrogJmp frogJmp = new FrogJmp();
+            //Console.WriteLine(frogJmp.Run(5, 25, 10));
+            #endregion
+
+            #region PermMissingElem
+            PermMissingElem permMissingElem = new PermMissingElem();
+            Console.WriteLine(permMissingElem.Run(new int[] { 1, 2, 3, 5, 6, 7, 8 }));
             #endregion
 
             Console.Read();
