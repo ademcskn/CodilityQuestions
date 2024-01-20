@@ -30,10 +30,14 @@ namespace CodilityQuestions
             #endregion
 
             #region PermMissingElem
-            PermMissingElem permMissingElem = new PermMissingElem();
-            Console.WriteLine(permMissingElem.Run(new int[] { 1, 2, 3, 5, 6, 7, 8 }));
+            //PermMissingElem permMissingElem = new PermMissingElem();
+            //Console.WriteLine(permMissingElem.Run(new int[] { 1, 2, 3, 5, 6, 7, 8 }));
             #endregion
 
+            #region TapeEquilibrium
+            TapeEquilibrium tapeEquilibrium = new TapeEquilibrium();
+            Console.WriteLine(tapeEquilibrium.Run(new int[] { 5, 4, 3, 3, 4, 5 }));
+            #endregion
             Console.Read();
         }
     }
