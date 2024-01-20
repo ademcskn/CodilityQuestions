@@ -10,12 +10,12 @@ namespace CodilityQuestions.Questions
 {
     internal class BinaryGap
     {
-        internal int Run(int N) 
+        internal int Run(int N)
         {
-            bool started = false;
+            string binaryN = Convert.ToString(N, 2);
             int counter = 0;
             int maxCount = 0;
-            string binaryN = Convert.ToString(N, 2);
+            bool started = false;
             for (int i = 0; i < binaryN.Length; i++)
             {
                 string subS = binaryN.Substring(i, 1);
@@ -28,12 +28,15 @@ namespace CodilityQuestions.Questions
                             maxCount = counter;
                         }
                     }
-                    counter = 0;
                     started = true;
+                    counter = 0;
                 }
-                if (subS == "0")
+                else if (subS == "0")
                 {
-                    counter++;
+                    if (started)
+                    {
+                        counter++;
+                    }
                 }
             }
             return maxCount;
