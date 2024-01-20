@@ -7,12 +7,12 @@ namespace CodilityQuestions
         static void Main(string[] args)
         {
             #region BinaryGap
-            //BinaryGap binaryGap = new BinaryGap();
+            //BinaryGap binaryGap = new();
             //Console.WriteLine(binaryGap.Run(1071));
             #endregion
 
             #region CyclicRotation
-            //CyclicRotation cyclicRotation = new CyclicRotation();
+            //CyclicRotation cyclicRotation = new();
             //foreach (int i in cyclicRotation.Run(new int[] { 3, 8, 9, 7, 6 }, 1))
             //{
             //    Console.Write(i + " ");
@@ -20,7 +20,7 @@ namespace CodilityQuestions
             #endregion
 
             #region OddOccurrencesInArray
-            //OddOccurrencesInArray oddOccurrencesInArray = new OddOccurrencesInArray();
+            //OddOccurrencesInArray oddOccurrencesInArray = new();
             //Console.WriteLine(oddOccurrencesInArray.Run(new int[] { 9, 3, 9, 3, 9, 7, 9 }));
             #endregion
 
@@ -30,14 +30,24 @@ namespace CodilityQuestions
             #endregion
 
             #region PermMissingElem
-            //PermMissingElem permMissingElem = new PermMissingElem();
+            //PermMissingElem permMissingElem = new();
             //Console.WriteLine(permMissingElem.Run(new int[] { 1, 2, 3, 5, 6, 7, 8 }));
             #endregion
 
             #region TapeEquilibrium
-            TapeEquilibrium tapeEquilibrium = new TapeEquilibrium();
-            Console.WriteLine(tapeEquilibrium.Run(new int[] { 5, 4, 3, 3, 4, 5 }));
+            //TapeEquilibrium tapeEquilibrium = new();
+            //Console.WriteLine(tapeEquilibrium.Run(new int[] { 5, 4, 3, 3, 4, 5 }));
             #endregion
+
+            #region MaxCounters
+            MaxCounters maxCounters = new(); 
+            foreach (int i in maxCounters.Run(5, new int[] { 3, 4, 4, 6, 1, 4, 4 }))
+            {
+                Console.Write(i + " ");
+            }
+            #endregion
+
+
             Console.Read();
         }
     }
