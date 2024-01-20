@@ -8,6 +8,7 @@ namespace CodilityQuestions.Questions
 {
     internal class MaxCounters
     {
+        #region 1.Solutiton 
         public int[] Run(int N, int[] A)
         {
             int maxValue = 0;
@@ -36,5 +37,66 @@ namespace CodilityQuestions.Questions
 
             return counters;
         }
+        #endregion
+
+        #region 2.Solution 
+        public int[] Run2(int N, int[] A)
+        {
+            int[] counters = new int[N];
+            int maxCounter = 0;
+            int lastMaxCounter = 0;
+
+            foreach (int operation in A)
+            {
+                if (operation >= 1 && operation <= N)
+                {
+                    int index = operation - 1;
+                    counters[index] = Math.Max(counters[index], lastMaxCounter) + 1;
+                    maxCounter = Math.Max(maxCounter, counters[index]);
+                }
+                else if (operation > N)
+                {
+                    lastMaxCounter = maxCounter;
+                }
+            }
+
+            for (int i = 0; i < counters.Length; i++)
+            {
+                counters[i] = Math.Max(counters[i], lastMaxCounter);
+            }
+
+            return counters;
+        }
+        #endregion
+
+        #region  3.Solution 
+        public int[] Run3(int N, int[] A)
+        {
+            int[] counters = new int[N];
+            int maxCounter = 0;
+            int lastMaxCounter = 0;
+
+            foreach (int operation in A)
+            {
+                if (operation >= 1 && operation <= N)
+                {
+                    int index = operation - 1;
+                    counters[index] = Math.Max(counters[index], lastMaxCounter) + 1;
+                    maxCounter = Math.Max(maxCounter, counters[index]);
+                }
+                else if (operation > N)
+                {
+                    lastMaxCounter = maxCounter;
+                }
+            }
+
+            for (int i = 0; i < counters.Length; i++)
+            {
+                counters[i] = Math.Max(counters[i], lastMaxCounter);
+            }
+
+            return counters;
+        }
+        #endregion
     }
 }

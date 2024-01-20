@@ -8,7 +8,7 @@ namespace CodilityQuestions
         {
             #region BinaryGap
             //BinaryGap binaryGap = new();
-            //Console.WriteLine(binaryGap.Run(1071));
+            //Console.WriteLine(binaryGap.Run(1041));
             #endregion
 
             #region CyclicRotation
@@ -40,13 +40,12 @@ namespace CodilityQuestions
             #endregion
 
             #region MaxCounters
-            MaxCounters maxCounters = new(); 
-            foreach (int i in maxCounters.Run(5, new int[] { 3, 4, 4, 6, 1, 4, 4 }))
+            MaxCounters maxCounters = new();
+            foreach (int i in maxCounters.Run3(5, new int[] { 3, 4, 4, 6, 1, 4, 4 }))
             {
                 Console.Write(i + " ");
             }
             #endregion
-
 
             Console.Read();
         }
