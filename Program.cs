@@ -40,12 +40,19 @@ namespace CodilityQuestions
             #endregion
 
             #region MaxCounters
-            MaxCounters maxCounters = new();
-            foreach (int i in maxCounters.Run3(5, new int[] { 3, 4, 4, 6, 1, 4, 4 }))
-            {
-                Console.Write(i + " ");
-            }
+            //MaxCounters maxCounters = new();
+            //foreach (int i in maxCounters.Run3(5, new int[] { 3, 4, 4, 6, 1, 4, 4 }))
+            //{
+            //    Console.Write(i + " ");
+            //}
             #endregion
+
+            #region MostFrequentEvenElement
+            MostFrequentEvenElement mostFrequentEvenElement = new();
+            int[] nums1 = { 0, 0, 1, 2, 2,2, 4, 4, 4 };
+            Console.WriteLine(mostFrequentEvenElement.FindMostFrequentEvenElement(nums1)); // Output: 2
+            #endregion
+
 
             Console.Read();
         }
