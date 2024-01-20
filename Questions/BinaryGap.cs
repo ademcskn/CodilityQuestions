@@ -12,34 +12,53 @@ namespace CodilityQuestions.Questions
     {
         internal int Run(int N)
         {
-            string binaryN = Convert.ToString(N, 2);
-            int counter = 0;
-            int maxCount = 0;
-            bool started = false;
-            for (int i = 0; i < binaryN.Length; i++)
+            #region 1.Çözüm
+            //string binaryN = Convert.ToString(N, 2);
+            //int counter = 0;
+            //int maxCount = 0;
+            //bool started = false;
+            //for (int i = 0; i < binaryN.Length; i++)
+            //{
+            //    string subS = binaryN.Substring(i, 1);
+            //    if (subS == "1")
+            //    {
+            //        if (started)
+            //        {
+            //            if (counter > maxCount)
+            //            {
+            //                maxCount = counter;
+            //            }
+            //        }
+            //        started = true;
+            //        counter = 0;
+            //    }
+            //    else if (subS == "0")
+            //    {
+            //        if (started)
+            //        {
+            //            counter++;
+            //        }
+            //    }
+            //}
+            //return maxCount;
+            #endregion
+
+            #region 2.Çözüm
+            int value = 0;
+            var results = new List<int>();
+            var binaryN = Convert.ToString(N, 2);
+            foreach (var bin in binaryN)
             {
-                string subS = binaryN.Substring(i, 1);
-                if (subS == "1")
+                if (bin.Equals('0'))
+                    value += 1;
+                else
                 {
-                    if (started)
-                    {
-                        if (counter > maxCount)
-                        {
-                            maxCount = counter;
-                        }
-                    }
-                    started = true;
-                    counter = 0;
-                }
-                else if (subS == "0")
-                {
-                    if (started)
-                    {
-                        counter++;
-                    }
+                    results.Add(value);
+                    value = 0;
                 }
             }
-            return maxCount;
+            return results.Max();
+            #endregion
         }
     }
 }
