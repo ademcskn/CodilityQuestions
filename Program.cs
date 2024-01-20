@@ -20,9 +20,14 @@ namespace CodilityQuestions
             #endregion
 
             #region OddOccurrencesInArray
-            OddOccurrencesInArray oddOccurrencesInArray = new OddOccurrencesInArray();
-            Console.WriteLine(oddOccurrencesInArray.Run(new int[] { 9, 3, 9, 3, 9, 7, 9 }));
-            #endregion 
+            //OddOccurrencesInArray oddOccurrencesInArray = new OddOccurrencesInArray();
+            //Console.WriteLine(oddOccurrencesInArray.Run(new int[] { 9, 3, 9, 3, 9, 7, 9 }));
+            #endregion
+
+            #region FrogJmp
+            FrogJmp frogJmp = new FrogJmp();
+            Console.WriteLine(frogJmp.Run(5, 25, 10));
+            #endregion
 
             Console.Read();
         }
